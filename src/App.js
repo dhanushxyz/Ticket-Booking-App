@@ -3,33 +3,39 @@ import ContactUS from './pages/ContactUS';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import './App.css';
+import Signup from './pages/Signup';
 
 function App() {
   return (
     <div>
+    <BrowserRouter >
     <div className="App">
       <Main/>
-      </div>
+    </div>
+    <>
       <div className='navbar'>
         <nav>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/Login">Login</a></li>
-            <li><a href="/ContactUs">ContactUs</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/Login">Login</Link></li>
+            <li><Link to="/ContactUs">ContactUs</Link></li>
           </ul>
         </nav>
       </div>
+    </>
 
         
       
       
     
-    <BrowserRouter>
+    
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/Login" element={<Login/>} />
       <Route path="/ContactUs" element={<ContactUS/>} />
+      <Route path="/Signup" element={<Signup/>} />
     </Routes>
     </BrowserRouter>
   </div>

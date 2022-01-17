@@ -1,0 +1,88 @@
+.stt{
+    padding-top: 40px;
+    background-color:  #35424a;
+    margin-left:  auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width: 25%;
+    padding-bottom: 40px;
+    border-radius: 6px;
+}
+.st{
+    padding-top: 40px;
+    background-color:  #35424a;
+    margin-left:  auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width: 25%;
+    padding-bottom: 40px;
+    border-radius: 6px;
+}
+.un{
+    margin-bottom: 35px;
+    padding: 10px 20px;
+}
+.u{
+    margin-bottom: 35px;
+    padding: 10px 20px;
+}
+.pass{
+    margin-bottom: 35px;
+    padding: 10px 20px;
+}
+.p{
+    margin-bottom: 35px;
+    padding: 10px 20px;
+}
+.formhead{
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-bottom: 35px;
+    color: #4056A1;
+}
+.formhea{
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-bottom: 35px;
+    color: #4056A1;
+}
+.sub{
+    background: #4056A1;
+    color: white;
+    padding: 5px 20px;
+    margin-bottom: 35px;
+}
+.su{
+    background: #4056A1;
+    color: white;
+    padding: 5px 20px;
+    margin-bottom: 35px;
+}
+.sihead{
+    color: grey;
+    margin-bottom: 15px;
+}
+.sihea{
+    color: grey;
+    margin-bottom: 15px;
+}
+.sibutton {
+    background-color: #4056A1 ;
+    padding: 5px 20px;
+}
+.sibutto {
+    background-color: #4056A1 ;
+    padding: 5px 20px;
+}
+.sibutton a{
+    color: white;
+    text-decoration: none;
+    
+}
+.sibutto a{
+    color: white;
+    text-decoration: none;
+    
+}
+
+
