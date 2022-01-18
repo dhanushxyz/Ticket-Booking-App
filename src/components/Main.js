@@ -4,8 +4,9 @@ function Main() {
     return (
         <div>
             <h1>
-                The Movie App
+                Welcome to cinizone
             </h1>
+            
             
         </div>
     )

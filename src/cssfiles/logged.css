@@ -1,0 +1,32 @@
+.middle{
+    margin-top: 180px;
+}
+.Book{
+    background: #35424a;
+    width: 20%;
+    margin:auto ;
+    border-radius: 6px;
+    
+}
+.show-details{
+    background: #35424a; 
+    width: 20%;
+    margin: auto;
+    border-radius: 6px;
+    
+    
+}
+.middle a{
+    text-decoration: none;
+}
+.Book :hover{
+    color: #ffff;
+    
+}
+.show-details a{
+    text-decoration: none;
+}
+.show-details :hover{
+    color: #ffff;
+    
+}

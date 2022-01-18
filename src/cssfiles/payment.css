@@ -1,0 +1,40 @@
+
+h1
+  {
+  text-align: center}
+.newform
+  {width: 350px;
+  margin: 0 auto}
+.newform .half input
+    {
+        width: 165px;
+        float: left ;
+        margin-right: 20px;
+        
+    }
+.newform input
+    {box-sizing: border-box;
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 20px;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    outline: none;
+    border: none}
+
+    
+.newform button
+{
+    background: #ffff;
+    font-weight: bold;
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 20px;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    outline: none;
+    border: none;
+}

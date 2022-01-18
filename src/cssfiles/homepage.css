@@ -45,11 +45,22 @@
   border-top-right-radius: 10px;
 }
 
-.seat.selected {
+.seat-selected {
+  
+  height: 20px;
+  width: 25px;
+  margin: 35px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   background-color: #6feaf6;
 }
 
-.seat.occupied {
+.seat-occupied {
+  height: 20px;
+  width: 25px;
+  margin: 35px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   background-color: #fff;
 }
 
@@ -72,8 +83,7 @@
 }
 
 .placement{
-    width: 100vw;
-    margin: auto;
+    
     margin-left: 400px;
 }
 .showcase {
@@ -120,5 +130,18 @@ p.text {
 }
 
 p.text span {
+  color: #4056A1;
+  text-decoration: bold;
+}
+.gotopay{
+  width: 20%;
+  height: 50px;
+  margin: auto;
+  background-color: #444451;
   color: #6feaf6;
+}
+.center{
+  text-align: center;
+  width: 100%;
+  margin-bottom: 35px;
 }

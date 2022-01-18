@@ -1,15 +1,22 @@
 import React from 'react'
 import Axios  from 'axios'
 import { useState } from 'react'
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, Link} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 import '../cssfiles/Login.css'
+import Seldate from './Seldate';
 
 function Login() {
+    const navigate = useNavigate();
     const [urernameLog , setusernameLog] = useState('');
     const [passwordLog, setpasswordLog] = useState('');
     const clickhandler = () =>{
-        Axios.post()
+        
+        localStorage.setItem("name", urernameLog);
+        
+        navigate('/Userlog')
     }
+    
     return (
         <>
         <div className="App">
@@ -31,6 +38,7 @@ function Login() {
         </>
         
     )
+    
 }
 
 export default Login
