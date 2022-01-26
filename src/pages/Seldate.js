@@ -8,9 +8,9 @@ function Seldate() {
     }
     return (
         <div className='date'>
-            <h1>Select a date for your Movie</h1>
-            <input type='date' min="2022-02-01"></input><br></br>
-            <button onClick={handler1}>Select movie and seats</button>
+            <h2>Select a date for your Movie</h2>
+            <input className='inp' type='date' min="2022-02-01"></input><br></br>
+            <button className='but' onClick={handler1}>Select movie and seats</button>
         </div>
     )
 }

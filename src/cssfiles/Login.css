@@ -14,7 +14,7 @@
     margin-left:  auto;
     margin-right: auto;
     margin-top: 100px;
-    margin-bottom: px;
+    margin-bottom: 30px;
     width: 25%;
     padding-bottom: 40px;
     border-radius: 6px;
@@ -31,7 +31,7 @@
     margin-bottom: 35px;
     padding: 10px 20px;
 }
-.p{
+.p,.em{
     margin-bottom: 35px;
     padding: 10px 20px;
 }

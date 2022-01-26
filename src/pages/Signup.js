@@ -8,7 +8,7 @@ function Signup() {
     const [passwordReg, setpasswordReg] = useState('');
     const [emailReg, setemailReg] = useState('');
     const [PhoneReg, setPhoneReg] = useState('');
-    const submitHandler = () =>
+    /* const submitHandler = () =>
     {
         Axios.post('http://localhost:3001/register',{
             username: urernameReg,
@@ -19,13 +19,13 @@ function Signup() {
             console.log(response)
         });
         
-    };
+    }; */
     return (
         <>
         <div className="App">
             <div className="st">
                 <div className="formhea"><b>Signup</b></div>
-                <form onSubmit={submitHandler}>
+                <form>
                         <input className="e" type="text" onChange={(e)=>{setemailReg(e.target.value);}} placeholder="Email"/><br/>
                         <input className="ph" type="text" onChange={(e)=>{setPhoneReg(e.target.value);}} placeholder="Phone"/><br/>
                         <input className="u" type="text" onChange={(e)=>{setusernameReg(e.target.value);}} placeholder="Username"/><br/>

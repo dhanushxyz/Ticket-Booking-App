@@ -31,10 +31,12 @@
   background-color: #35424a;
   margin: 14px;
   border-radius: 15px;
+  
 }
 nav{
   width: 90%;
   margin: auto;
+  
   padding-top: 25px;
   padding-bottom: 25px;
   
@@ -43,8 +45,10 @@ nav{
 
 ul{
   list-style: none;
+  
   display: flex;
   justify-content: space-evenly;
+  
   
 }
 nav ul a{

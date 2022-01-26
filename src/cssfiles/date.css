@@ -8,3 +8,16 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+.but{
+  background-color: #4056A1;
+  color: white;
+  margin-top: 20px;
+  padding: 5px 15px;
+}
+.inp{
+  padding: 5px 15px;
+}
+h2{
+  color: rgb(14, 64, 172);
+  font-size: 23px;
+}

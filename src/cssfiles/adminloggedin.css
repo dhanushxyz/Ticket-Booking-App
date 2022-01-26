@@ -1,0 +1,26 @@
+.h2{
+    background-color: blanchedalmond;
+}
+.Admloggedin{
+    text-align: center;
+    margin-top: 40px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   -ms-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+
+}
+.cen{
+    text-align: center;
+}
+.deleteuser , .edit{
+    background-color: #444451;
+    color: #6feaf6;
+    padding: 10px 20px;
+    margin-bottom: 35px;
+}
+.text{
+    color: #4056A1;
+    font-size: 18px;
+}

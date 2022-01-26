@@ -3,13 +3,19 @@ import '../cssfiles/homepage.css'
 import { useState } from 'react';
 import { Container } from 'reactstrap';
 import Axios from 'axios'
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Link, useNavigate } from "react-router-dom";
 function Bookseat() {
-    Axios.get("/moviedata")
+    var i=0;
+    var mob=[];
+    const navigate = useNavigate();
     const [count, setcount] = useState(0);
     const [total, settotal] = useState(0);
     const [mov, setmov] = useState("null")
+    const [li, setli] = useState([])
     const [list, setlist] = useState([])
+    
+
+    
     var handleclick = (e) =>{
         
         
@@ -35,10 +41,16 @@ function Bookseat() {
         
         
     }
-    
-    const random = () => {
-        {/* <Redirect to = "/Bookcomplete"/> */}
+    var proceed = ()=>{
+        if(count!=0){
+            navigate('/Payment')
+        }
+        else{
+            window.alert("please select a seat")
+        }
     }
+    
+   
     return (
         <div>
             <div id="cool" className="movie-container">
@@ -149,10 +161,13 @@ function Bookseat() {
             You have selected <span>{count}</span> seats for a price of $<span>{total}</span>
             </p> 
             <div className='center'>
-                <Link to="/Payment"><button className='gotopay'>Proceed to payment</button></Link>
+                <button onClick={proceed} className='gotopay'>Proceed to payment</button>
+                 
             </div>
+            
         </div>
     )
+    
 }
 
 export default Bookseat

@@ -11,3 +11,13 @@
 {
     text-decoration: none;
 }
+.referlogin{
+    text-align: center;
+    margin-bottom: 35px;
+    
+}
+.butlog{
+    background-color:#444451 ;
+    color: #6feaf6;
+    padding: 10px 20px;
+}

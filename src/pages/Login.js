@@ -10,25 +10,40 @@ function Login() {
     const navigate = useNavigate();
     const [urernameLog , setusernameLog] = useState('');
     const [passwordLog, setpasswordLog] = useState('');
-    const clickhandler = () =>{
-        
-        localStorage.setItem("name", urernameLog);
-        
-        navigate('/Userlog')
-    }
+    const [emailLog, setemailLog] = useState("");
     
+    const clickhandler = (e) =>{
+        
+        Axios.post("http://localhost:3001/login",{
+            e: emailLog,
+            p: passwordLog,
+        }).then((response) => {
+            if(response.data.message){
+                window.alert("Enter valid details")
+            }
+            else{
+                localStorage.setItem("name",response.data[0].login_username)
+                window.alert("login sucessful")
+                navigate("/Userlog")
+            }
+            
+        })
+        
+        e.preventDefault()
+        
+    }
     return (
         <>
         <div className="App">
             <div className="stt">
                 <div className="formhead"><b>Login</b></div>
                 <form onSubmit={clickhandler}>
-                        <input className="un" type="text" onChange={(e)=>{setusernameLog(e.target.value);}} placeholder="Username" />     <br/>
-                        <input className="pass" type="password" onChange={(e)=>{setpasswordLog(e.target.value);}} placeholder="Password" /><br/>
+                        <input className="em" type="text" onChange={(e)=>setemailLog(e.target.value)} placeholder="email" />     <br/>
+                        <input className="pass" type="password" onChange={(e)=>setpasswordLog(e.target.value)} placeholder="Password" /><br/>
                         <input className="sub" type="submit" value="submit"/>
                 </form>
-                <div className='sihead'>If you dont have an account Sign in here</div>
-                <button className='sibutton'><Link to="/Signup">Sign up</Link></button>
+                <div className='sihead'>If you Want to log in as a admin click below</div>
+                <button className='sibutton'><Link to="/Adminlog">Admin Login</Link></button>
             </div>
                 
             </div>
@@ -38,6 +53,7 @@ function Login() {
         </>
         
     )
+    
     
 }
 
