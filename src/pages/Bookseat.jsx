@@ -37,6 +37,8 @@ function Bookseat() {
             
             
         })
+        var date1 = localStorage.getItem("date")
+        setdate(date1)
         
       
     }, []);
@@ -76,33 +78,52 @@ function Bookseat() {
         
         
     }
+    var handlechanging = (e)=>
+    {
+    setmovname(e.target.value); 
     
+    if(e.target.value == movie1){
+        setmov(cost1)
+    }
+    else if(e.target.value == movie2){
+        setmov(cost2)
+    }
+    else{
+        setmov(cost3)
+    }
+    if(count>0){
+        settotal(count*mov)
+    }
+}
+
     
     var proceed = ()=>{
        
 
         if(count!=0){
-            var date1 = localStorage.getItem("date")
-            setdate(date1)
+            
             if(isexits === 0){
                 axios.post("http://localhost:3001/demo1",{
                 a : list.toString(),
                 date : date,
-                movie_name : mov
+                movie_name : movname
                 
             })
             
             }
-            else{
-                axios.post("http://localhost:3001/demo2",{
+            else if(isexits == 1){
+                console.log(list)
+                axios.put("http://localhost:3001/demo2",{
                     a : list.toString(),
                     date : date,
-                    movie : movname
+                    movie_name : movname
                     
+                }).then((res)=>{
+
                 })
             }
             
-            /* navigate('/Payment') */
+            navigate('/Payment')
         }
         else{
             window.alert("please select a seat")
@@ -124,8 +145,8 @@ function Bookseat() {
                 }
             
             else{ 
-            setglist(result.data[0].seats_occupied) 
-            var arr1 = glist.split(',');
+            setglist(result.data[0].seatsoccupied) 
+            var arr1 = result.data[0].seatsoccupied.split(',');
             setarray(arr1);
             setlist(arr1);
             setlen(result.data.length)
@@ -140,20 +161,17 @@ function Bookseat() {
    
     
     
-          console.log(movname)
-    
-    
     
     return (
         <div>
             <div id="cool" className="movie-container">
             <div className='textc'><h1>Pick a movie:</h1></div>
             <div className='selectionmov'>
-                <select id="movie" onChange={(e)=>{setmov(e.target.value); if(count>0){settotal(count*e.target.value)} }}>
-                    <option id="null" value="null">Click here to select a movie</option>
-                    <option value={cost1}>{movie1} cost:{cost1}</option>
-                    <option value={cost2}>{movie2} cost:{cost2}</option>
-                    <option value={cost3}>{movie3} cost:{cost3}</option>
+                <select id="movie" onChange={handlechanging}>
+                    <option value="null">Click here to select a movie</option>
+                    <option  value={movie1}>{movie1} cost:{cost1}</option>
+                    <option  value={movie2}>{movie2} cost:{cost2}</option>
+                    <option  value={movie3}>{movie3} cost:{cost3}</option>
                 </select>
             </div>
             
@@ -181,7 +199,7 @@ function Bookseat() {
             <div className="placement">
             <div className="row">
                 <div id='1' onClick={handleclick} className={array.includes("1") ? "seat-occupied" : "seat"}>1</div>
-                <div id='2' onClick={handleclick} className= {array.includes("2") ? "seat-occupied" : "seat"}>2</div>
+                <div id='2' onClick={handleclick} className={array.includes("2") ? "seat-occupied" : "seat"}>2</div>
                 <div id='3' onClick={handleclick} className={array.includes("3") ? "seat-occupied" : "seat"}>3</div>
                 <div id='4' onClick={handleclick} className={array.includes("4") ? "seat-occupied" : "seat"}>4</div>
                 <div id='5' onClick={handleclick} className={array.includes("5") ? "seat-occupied" : "seat"}>5</div>
