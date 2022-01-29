@@ -23,6 +23,7 @@ function Login() {
             }
             else{
                 localStorage.setItem("name",response.data[0].login_username)
+                localStorage.setItem("email",response.data[0].email_Id)
                 window.alert("login sucessful")
                 navigate("/Userlog")
             }

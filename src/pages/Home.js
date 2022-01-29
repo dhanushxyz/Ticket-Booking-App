@@ -32,10 +32,10 @@ function Home() {
                     {detail.map((val,key)=>{
                         return(
                         <div className="imgcon" key={key}>
-                        <img src={val.posterurl} height="400px" width="200px"/>
-                        <h3>{val.movname}</h3>
-                        <h5>Hero:{val.actors}</h5>
-                        <h5>Director:{val.director}</h5>
+                        <img src={val.movieimage} height="400px" width="200px"/>
+                        <h3>{val.movie_name}</h3>
+                        <h5>Hero:{val.cast}</h5>
+                        
                         </div>
                         )
                         
