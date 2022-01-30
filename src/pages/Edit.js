@@ -3,18 +3,6 @@ import React from 'react';
 import { useState ,useEffect} from 'react';
 function Edit() {
     const [count, setcount] = useState(0);
-    useEffect(() => {
-      
-        Axios.get("http://localhost:3001/moviedetail").then((result)=>{
-            var len = result.data.length
-            setcount(result.data[len-1].movie_id)
-        })
-      
-    }, []);
-    
-    const clickhandle = () =>{
-        Axios.post("")
-    }
     const [name, setname] = useState("");
     const [release, setrelease] = useState("");
     const [genre, setgenre] = useState("");
@@ -22,6 +10,36 @@ function Edit() {
     const [movieimage, setmovieimage] = useState("");
     const [cast, setcast] = useState("");
     const [cost, setcost] = useState(0);
+    useEffect(() => {
+      
+        Axios.get("http://localhost:3001/moviedetail").then((result)=>{
+            var len = result.data.length
+            setcount(parseInt(result.data[len-1].movie_id) + 1 )
+        })
+      
+    }, []);
+    
+    const clickhandle = () =>{
+        Axios.post("http://localhost:3001/movieinsert",{
+            name : name,
+            release : release,
+            genre : genre,
+            id : count
+
+        }).then((res)=>{
+
+        })
+        Axios.post("http://localhost:3001/langinsert",{
+            lang : lang,
+            mov : name
+
+        }).then((res)=>{
+
+        })
+
+
+    }
+    
     console.log(count)
   return (
     <div className="App">
