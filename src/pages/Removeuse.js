@@ -9,12 +9,7 @@ function Removeuse() {
         Axios.post("http://localhost:3001/remove",{
             e: email,
             })
-        if(email == null)        
-        window.alert("Removed the user with the email you provided")
-        
-        else{
-            window.alert("Provide proper email")
-        }
+        window.alert("The user has been removed")
                 
 
             

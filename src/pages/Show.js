@@ -1,32 +1,19 @@
-import  Axios  from 'axios';
-import React from 'react'
-import { useEffect, useState } from 'react'
-import '../cssfiles/userdetail.css';
+import React from 'react';
+import Axios from 'axios';
+import { useState ,useEffect } from 'react';
 
-function Userdetails() {
-    var email1 =localStorage.getItem("email");
-    const [email, setemail] = useState(email1);
+
+function Show() {
     const [data, setdata] = useState([]);
     
-    
-    
-    
-        Axios.post("http://localhost:3001/use",{
-            
-            email : email
-        }).then((res)=>{
-            setdata(res.data)
+    Axios.get('http://localhost:3001/booking').then((result)=>{
+            setdata(result.data)
         })
-            
-          
     
-    return (
-        
-        
-        
-        <div>
-            
-                {data.map((val,key)=>{
+    console.log(data)
+  return(
+      <div>
+          {data.map((val,key)=>{
                     return(
                         <div className='container1'>
                             <div>
@@ -49,10 +36,8 @@ function Userdetails() {
                         </div>
                     )
                 })}
-                
-            
-        </div>
-    )
+      </div>
+  )
 }
 
-export default Userdetails
+export default Show;

@@ -5,8 +5,21 @@
     margin-right: auto;
     margin-top: 100px;
     width: 25%;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     border-radius: 6px;
+    
+}
+.stt1
+{
+    padding-top: 40px;
+    background-color:  #35424a;
+    margin-left:  auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 35px;
+    width: 35%;
+    padding-bottom: 30px;
+    border-radius: 6px; 
 }
 .st{
     padding-top: 40px;

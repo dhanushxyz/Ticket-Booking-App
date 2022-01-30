@@ -34,7 +34,7 @@ function Home() {
                         <div className="imgcon" key={key}>
                         <img src={val.movieimage} height="400px" width="200px"/>
                         <h3>{val.movie_name}</h3>
-                        <h5>Hero:{val.cast}</h5>
+                        <h5>Cast - {val.cast}</h5>
                         
                         </div>
                         )

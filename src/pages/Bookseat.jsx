@@ -94,6 +94,7 @@ function Bookseat() {
     if(count>0){
         settotal(count*mov)
     }
+    
 }
 
     
@@ -130,7 +131,7 @@ function Bookseat() {
         }
     }
 
-        useEffect(() => {
+        useEffect((e) => {
             
             
             var date = localStorage.getItem("date")
@@ -141,6 +142,9 @@ function Bookseat() {
                 
                 if(result.data.message){
                     setisexits(0)
+                    setarray([]);
+                    setlist([]);
+                    
                     
                 }
             
@@ -156,10 +160,16 @@ function Bookseat() {
             
         })
             
-          },[mov]);
+          },[movname]);
     
-   
     
+    localStorage.setItem("count",count)
+    localStorage.setItem("moviename",movname)
+    localStorage.setItem("cost",total)
+    var seatsbooked = ulist.toString();
+    localStorage.setItem("seatsbooked",seatsbooked)
+    
+
     
     
     return (

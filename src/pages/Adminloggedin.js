@@ -13,7 +13,8 @@ function Adminloggedin() {
           </div>
           <div className='cen'>
             <Link to="/Remove"><button className="deleteuser">Remove a user</button></Link><br></br>
-            <button className="edit">Edit the movie being casted</button>
+            <Link to="/Editscreen"><button className="edit">Edit the movie being casted</button></Link><br></br>
+            <Link to="/Show"><button className="edit">Show all the booking details</button></Link>
           </div>
           
       </div>

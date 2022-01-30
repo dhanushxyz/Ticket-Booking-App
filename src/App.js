@@ -14,6 +14,9 @@ import Payment from './pages/Payment';
 import Adminlog from './pages/Adminlog';
 import Adminloggedin from './pages/Adminloggedin';
 import Removeuse from './pages/Removeuse';
+import Edit from './pages/Edit';
+import Show from './pages/Show';
+import Editscreen from './pages/Editscreen';
 
 
 
@@ -55,7 +58,9 @@ function App() {
       <Route path="/Userlog" element={<Userlog/>}/>
       <Route path="/Userdetails" element={<Userdetails/>}/>
       <Route path="/Adminloggedin" element={<Adminloggedin/>} />
-      
+      <Route path="/Edit" element={<Edit/>} />
+      <Route path="/Show" element={<Show/>} />
+      <Route path="/Editscreen" element={<Editscreen/>} />
     </Routes>
     </BrowserRouter>
   </div>
