@@ -37,6 +37,17 @@ function Edit() {
 
         })
 
+        Axios.put("http://localhost:3001/screening",{
+            screenid: localStorage.getItem("screen"),
+            mov : name,
+            image : movieimage,
+            cast : cast,
+            cost : cost,
+
+        }).then((result)=>{
+
+        })
+
 
     }
     
