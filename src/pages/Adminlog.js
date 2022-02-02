@@ -31,6 +31,8 @@ function Adminlog() {
         e.preventDefault()
         
     }
+
+    localStorage.setItem("Adminemail",emailAdm);
   return (
   <div>
      <div className="App">

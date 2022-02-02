@@ -17,7 +17,7 @@ import Removeuse from './pages/Removeuse';
 import Edit from './pages/Edit';
 import Show from './pages/Show';
 import Editscreen from './pages/Editscreen';
-
+import Signup from './pages/Signup'
 
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/Login">Login</Link></li>
             <li><Link to="/">Logout</Link></li>
-            <li><Link to="/ContactUs">ContactUs</Link></li>
+            <li><Link to="/Signup">Sign up</Link></li>
           </ul>
         </nav>
       </div>
@@ -50,7 +50,7 @@ function App() {
       <Route path="/Login" element={<Login/>} />
       <Route path="/ContactUs" element={<ContactUS/>} />
       <Route path="/Adminlog" element={<Adminlog/>} />
-      
+      <Route path="/signup" element={<Signup/>} />
       <Route path="/Seldate" element={<Seldate/>}/>
       <Route path="/Remove" element={<Removeuse/>}/>
       <Route path="/Payment" element={<Payment/>}/>

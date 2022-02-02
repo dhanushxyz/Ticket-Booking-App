@@ -1,7 +1,9 @@
 import  Axios  from 'axios';
 import React from 'react';
 import { useState ,useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
 function Edit() {
+    const navigate = useNavigate();
     const [count, setcount] = useState(0);
     const [name, setname] = useState("");
     const [release, setrelease] = useState("");
@@ -14,7 +16,7 @@ function Edit() {
       
         Axios.get("http://localhost:3001/moviedetail").then((result)=>{
             var len = result.data.length
-            setcount(parseInt(result.data[len-1].movie_id) + 1 )
+            
         })
       
     }, []);
@@ -24,7 +26,7 @@ function Edit() {
             name : name,
             release : release,
             genre : genre,
-            id : count
+            cast : cast,
 
         }).then((res)=>{
 
@@ -39,19 +41,23 @@ function Edit() {
 
         Axios.put("http://localhost:3001/screening",{
             screenid: localStorage.getItem("screen"),
+            email: localStorage.getItem("Adminemail"),
             mov : name,
             image : movieimage,
-            cast : cast,
+            
             cost : cost,
 
         }).then((result)=>{
 
         })
+        window.alert("The movie has been updated");
+        navigate("/Adminloggedin")
+
 
 
     }
     
-    console.log(count)
+    
   return (
     <div className="App">
     <div className="stt1">

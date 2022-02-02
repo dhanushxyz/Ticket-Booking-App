@@ -4,7 +4,7 @@ function Main() {
     return (
         <div>
             <h1>
-                Welcome to cinizone
+                🎬 Welcome to cinizone
             </h1>
             
             
