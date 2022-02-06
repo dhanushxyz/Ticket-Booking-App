@@ -32,7 +32,7 @@ function Home() {
                     {detail.map((val,key)=>{
                         return(
                         <div className="imgcon" key={key}>
-                        <img src={val.movieimage} height="400px" width="200px"/>
+                        <img src={val.movieimage} height="400px" width="200px"/>~
                         <h3>{val.movie_name}</h3>
                         <h5>Cast - {val.cast}</h5>
                         

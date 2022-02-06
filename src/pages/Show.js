@@ -32,6 +32,9 @@ function Show() {
                             <div className='det'>
                                 date booked : {val.booked_date}
                             </div>
+                            <div className='det'>
+                                date booked : {val.seatsselected}
+                            </div>
                             </div>
                         </div>
                     )
